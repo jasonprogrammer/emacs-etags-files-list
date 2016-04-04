@@ -31,11 +31,16 @@ The script takes a JSON file containing the criteria as input, e.g.:
 ```
 
 *output* - A path to the output file (containing file paths)
+
 *log* - A path to a log file file (for detail on files that were included/excluded)
+
 *dirs* - An array of multiple configurations (so you can search multiple directories)
     *dir* - A directory to search recursively
+    
     *exclude* - Relative paths (to directories or files) to exclude. This exclude rule runs first (has priority over the regular                       expressions).
+    
     *include_regex* - An array of regular expression patterns (for directories or files) to include.
+    
     *exclude_regex* - An array of regular expression patterns (for directories or files) to exclude. This runs last, and will take                           priority over include_regex.
 
 ## Example Output
