@@ -8,6 +8,10 @@ This is a Python script that searches directories for files that fit certain cri
 
 If you're working in a huge project, your etags files can easily become huge. This script helps keep the etags output file small.
 
+## Dependencies
+
+Python 3
+
 ## How do I run the script?
 
 python3 create_files_list.py &lt;input_json_file&gt;
@@ -33,7 +37,9 @@ The script takes a JSON file containing the criteria as input, e.g.:
     }]
 }
 ```
+This example JSON file indicates that two separate directories should be recursively searched. Files with the extension (.js) will be included, but files with extension (.min.js) will be excluded. The *c:/projects/nodetest/node_modules* directory will not be traversed.
 
+### JSON Parameters
 *output* - A path to the output file (containing file paths)
 
 *log* - A path to a log file file (for detail on files that were included/excluded)
