@@ -6,7 +6,7 @@ This is a Python script that searches directories for files that fit certain cri
 
 ## Why would I use this?
 
-If you're working in a huge project, your etags files can easily become huge. This script helps create the etags index file small.
+If you're working in a huge project, your etags files can easily become huge. This script helps keep the etags output file small.
 
 ## Example JSON Input
 
@@ -18,7 +18,7 @@ The script takes a JSON file containing the criteria as input, e.g.:
     "log": "c:/projects/.emacs-js-tags-files.log",
     "dirs": [{
         "dir": "c:/projects",
-        "exclude": ["c:/projects/nodetest/node_modules"],
+        "exclude": ["nodetest/node_modules"],
         "include_regex": [".*?\\.js$"],
         "exclude_regex": [".*?\\.min\\.js$"]
     },{
@@ -29,6 +29,14 @@ The script takes a JSON file containing the criteria as input, e.g.:
     }]
 }
 ```
+
+*output* - A path to the output file (containing file paths)
+*log* - A path to a log file file (for detail on files that were included/excluded)
+*dirs* - An array of multiple configurations (so you can search multiple directories)
+    *dir* - A directory to search recursively
+    *exclude* - Relative paths (to directories or files) to exclude. This exclude rule runs first (has priority over the regular                       expressions).
+    *include_regex* - An array of regular expression patterns (for directories or files) to include.
+    *exclude_regex* - An array of regular expression patterns (for directories or files) to exclude. This runs last, and will take                           priority over include_regex.
 
 ## Example Output
 
