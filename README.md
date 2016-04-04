@@ -10,7 +10,7 @@ If you're working in a huge project, your etags files can easily become huge. Th
 
 ## How do I run the script?
 
-python3 create_files_list.py <input_json_file>
+python3 create_files_list.py &lt;input_json_file&gt;
 
 ## Example JSON Input
 
