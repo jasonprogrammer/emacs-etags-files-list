@@ -8,6 +8,10 @@ This is a Python script that searches directories for files that fit certain cri
 
 If you're working in a huge project, your etags files can easily become huge. This script helps keep the etags output file small.
 
+## How do I run the script?
+
+python3 create_files_list.py <input_json_file>
+
 ## Example JSON Input
 
 The script takes a JSON file containing the criteria as input, e.g.:
