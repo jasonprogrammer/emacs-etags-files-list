@@ -1,4 +1,4 @@
-# emacs-etags-files-list
+# Search directories and create a file containing file paths
 
 ## What does this do?
 
