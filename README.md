@@ -6,7 +6,7 @@ This is a Python script that searches directories for files that fit certain cri
 
 ## Why would I use this?
 
-If you're using Emacs, and generating etags while working in a huge project, your etags files can easily become huge. This script helps keep the etags output file small. The output file from this script can be used an input to the ctags command, to help create a smaller etags index file.
+If you're using Emacs, and generating [etags](http://ctags.sourceforge.net/) while working in a huge project, your TAGS files can easily become huge. This script helps keep the etags output file small. The output file from this script can be used an input to the ctags command, to help create a smaller etags index file.
 
 ## Dependencies
 
