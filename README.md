@@ -66,3 +66,7 @@ c:\projects\index.js
 c:\projects\test.js
 c:\projects2\colors.js
 ```
+
+##License
+
+MIT License
