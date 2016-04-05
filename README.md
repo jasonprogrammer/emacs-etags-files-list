@@ -2,11 +2,11 @@
 
 ## What does this do?
 
-This is a Python script that searches directories for files that fit certain criteria (e.g. files that match a certain regular expression), and creates an output file containing full paths to those files. The output file is then used an input to the ctags command, to help create an exuberant ctags index that covers specific files.
+This is a Python script that searches directories for files that fit certain criteria (e.g. files that match a certain regular expression), and creates an output file containing full paths to those files.
 
 ## Why would I use this?
 
-If you're working in a huge project, your etags files can easily become huge. This script helps keep the etags output file small.
+If you're using Emacs, and generating etags while working in a huge project, your etags files can easily become huge. This script helps keep the etags output file small. The output file from this script can be used an input to the ctags command, to help create a smaller etags index file.
 
 ## Dependencies
 
