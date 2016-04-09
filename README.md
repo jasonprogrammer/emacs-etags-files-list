@@ -10,7 +10,7 @@ Whenever you need to generate a file that contains file paths. If you're using E
 
 For example, once I've generated the file containing file paths (.emacs-js.tags-files), I run this:
 
-c:\ctags\ctags.exe -e -L .emacs-js-tags-files -f .emacs-js-tags
+    c:\ctags\ctags.exe -e -L .emacs-js-tags-files -f .emacs-js-tags
 
 and get a smaller tags file (.emacs-js-tags).
 
