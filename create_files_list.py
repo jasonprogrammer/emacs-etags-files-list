@@ -32,17 +32,18 @@ def create_files_list_walk(search_path, excludes, log_path, manifest_path, inclu
                 create_files_list_walk(full_path, excludes, log_path, manifest_path, include_regex, exclude_regex)
                 continue
 
-            skip_file = False
             if include_regex:
+                skip_file = True
                 for pattern in include_regex:
-                    if not re.match(pattern, full_path):
-                        skip_file = True
-                        log("included ({0}): {1}".format(pattern, full_path), log_file)
+                    if re.match(pattern, full_path):
+                        skip_file = False
+                        log("including ({0}), it matches ({1})".format(full_path, pattern), log_file)
                         break
                 if skip_file:
                     continue
 
             if exclude_regex:
+                skip_file = False
                 for pattern in exclude_regex:
                     if re.match(pattern, full_path):
                         skip_file = True
