@@ -6,7 +6,13 @@ This is a Python script that searches directories for files that fit certain cri
 
 ## Why would I use this?
 
-If you're using Emacs, and generating [etags](http://ctags.sourceforge.net/) while working in a huge project, your TAGS files can easily become huge. This script helps generate an input file for the ctags command, to keep the etags output file small.
+Whenever you need to generate a file that contains file paths. If you're using Emacs, and generating [exuberant ctags](http://ctags.sourceforge.net/) while working in a huge project, your TAGS files can easily become huge. This script helps generate an input file for the ctags command, allowing you to specify exactly which files will be indexed.
+
+For example, once I've generated the file containing file paths (.emacs-js.tags-files), I run this:
+
+c:\ctags\ctags.exe -e -L .emacs-js-tags-files -f .emacs-js-tags
+
+and get a smaller tags file (.emacs-js-tags).
 
 ## Dependencies
 
